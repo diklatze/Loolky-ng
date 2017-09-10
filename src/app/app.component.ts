@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HomePage } from '../pages/home/home';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  rootPage:any = HomePage;
 }

@@ -1,0 +1,221 @@
+<!-- <ion-title>
+      <img src="./assets/images/loolky-logo.png" alt="loolky" id="logoImg">
+    </ion-title> -->
+    <div class="ui inverted menu page orange" style="margin: 0px 0px 0px 0px; border-radius: 0px; height:2px">
+      <div class="right item">
+      <a href="#" class="item">Join</a>
+      <a href="#" class="item" (click)="goToSignIn()">Sign In</a>
+
+    </div>
+       
+    </div>
+<div class="ui menu page brown" style="margin: 0px 0px 0px 0px; border-radius: 0px; height:50px">
+  <div id="container1" class="ui container">
+    <a href="#" class="header item">
+        <img class="logo" src="../../assets/images/loolky-logo.png" style="height: 3em; width: 7em;" >
+        </a>
+    <a class="browse item" #menuPopup1>
+    <b>Reviews</b>
+    <i class="dropdown icon"></i>
+  </a>
+    <div id="popup1" class="ui fluid popup bottom left transition hidden" style="top: 6px; left: 1px; bottom: auto; right: auto; width: 600px;">
+      <div class="ui four column divided width grid">
+        <div class="column" style="width: 175px">
+          <h4 class="ui header">Women</h4>
+          <div class="ui link list">
+            <a class="item">Dresses</a>
+            <a class="item">Tops</a>
+            <a class="item">Trousers & Leggins & Shorts</a>
+            <a class="item">Shoes</a>
+            <a class="item">Swimwear</a>
+            <a class="item">Accessories</a>
+            <a class="item">Lingerie & Sleepwear</a>
+            <a class="item">Coats & Jackets</a>
+            <a class="item">Maternity</a>
+          </div>
+        </div>
+        <div class="column" style="width: 150px">
+          <h4 class="ui header">Man</h4>
+          <div class="ui link list">
+            <a class="item">Shirts</a>
+            <a class="item">Trousers</a>
+            <a class="item">Shoes</a>
+            <a class="item">Coats & Jackets</a>
+            <a class="item">Swimwear</a>
+            <a class="item">Underwear</a>
+            <a class="item">Accessories</a>
+
+          </div>
+        </div>
+        <div class="column" style="width: 100px">
+          <h4 class="ui header">Kids</h4>
+          <div class="ui link list">
+            <a class="item">Baby</a>
+            <a class="item">Girls</a>
+            <a class="item">Boys</a>
+          </div>
+        </div>
+        <div class="column" style="width: 150px">
+          <h4 class="ui header">Homeware</h4>
+          <div class="ui link list">
+            <a class="item">Bedding</a>
+            <a class="item">Kitchenware</a>
+            <a class="item">Storage</a>
+            <a class="item">Curtains</a>
+            <a class="item">Lighting</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="browse item" #menuPopup2>
+    <b>For Sale</b>
+    <i class="dropdown icon"></i>
+  </a>
+    <div id="popup2" class="ui fluid popup bottom left transition hidden" style="top: 6px; left: 1px; bottom: auto; right: auto; width: 600px;">
+      <div class="ui four column divided width grid">
+        <div class="column" style="width: 175px">
+          <h4 class="ui header">Women</h4>
+          <div class="ui link list">
+            <a class="item">Dresses</a>
+            <a class="item">Tops</a>
+            <a class="item">Trousers & Leggins & Shorts</a>
+            <a class="item">Shoes</a>
+            <a class="item">Swimwear</a>
+            <a class="item">Accessories</a>
+            <a class="item">Lingerie & Sleepwear</a>
+            <a class="item">Coats & Jackets</a>
+             <a class="item">Maternity</a>
+          </div>
+        </div>
+        <div class="column" style="width: 150px">
+          <h4 class="ui header">Man</h4>
+          <div class="ui link list">
+            <a class="item">Shirts</a>
+            <a class="item">Trousers</a>
+            <a class="item">Shoes</a>
+            <a class="item">Coats & Jackets</a>
+            <a class="item">Swimwear</a>
+            <a class="item">Underwear</a>
+            <a class="item">Accessories</a>
+
+          </div>
+        </div>
+        <div class="column" style="width: 100px">
+          <h4 class="ui header">Kids</h4>
+          <div class="ui link list">
+            <a class="item">Baby</a>
+            <a class="item">Girls</a>
+            <a class="item">Boys</a>
+          </div>
+        </div>
+        <div class="column" style="width: 150px">
+          <h4 class="ui header">Homeware</h4>
+          <div class="ui link list">
+            <a class="item">Bedding</a>
+            <a class="item">Kitchenware</a>
+            <a class="item">Storage</a>
+            <a class="item">Curtains</a>
+            <a class="item">Lighting</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <a class="browse item" #menuPopup3>
+    <b>Loolkers</b>
+    <i class="dropdown icon"></i>
+  </a>
+    <div id="popup3" class="ui fluid popup bottom left transition hidden" style="top: 6px; left: 1px; bottom: auto; right: auto; width: 600px;">
+      <div class="ui four column divided width grid">
+        <div class="column" style="width: 175px">
+          <h4 class="ui header">Top Blogs</h4>
+          <div class="ui link list">
+            <a class="item">I love Loolky</a>
+            <a class="item">Momy Blog</a>
+            <a class="item">All family</a>
+            <a class="item">Man in Black</a>
+           
+          </div>
+        </div>
+        <div class="column" style="width: 150px">
+          <h4 class="ui header">Most viewd Blogs</h4>
+          <div class="ui link list">
+            <a class="item">Me Myself & I</a>
+            <a class="item">How does it feel?</a>
+            <a class="item">Rock Style</a>
+            <a class="item">Queens</a>
+            <a class="item">Love</a>
+           
+
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+    <div class="item">
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search">
+          <i class="search icon"></i>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="item">
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="search item by full URL">
+          <i class="search icon"></i>
+        </div>
+      </div>
+    </div> -->
+
+    
+    <!-- <div class="right item">
+      <a href="#" class="item">Join</a>
+      <a href="#" class="item">Sign In</a>
+
+    </div> -->
+
+
+
+
+    <!-- <div class="ui inverted menu page" style="padding:0px 10px; margin:0px 0px 0px 0px; border-radius:0px; height:75px; width:100%">>
+
+    <div class="ui container">
+      <a href="#" class="header item">
+        <img class="logo" src="../../assets/images/loolky-logo.png" style="height: 5em; width: 5em;" >
+        
+      </a>
+      <a  class="item">Home</a>
+      <div #dropDown class="ui simple dropdown item">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="#">Link Item</a>
+          <a class="item" href="#">Link Item</a>
+          <div class="divider"></div>
+          <div class="header">Header Item</div>
+          <div class="item">
+            <i class="dropdown icon"></i> Sub Menu
+            <div class="menu">
+              <a class="item" href="#">Link Item</a>
+              <a class="item" href="#">Link Item</a>
+            </div>
+          </div>
+          <a class="item" href="#">Link Item</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <div #descriptionAccordion class="ui accordion field-content">
+  <div class="title field-content">
+    <label class="field-content">description<a>&nbsp;&nbsp;<i>read more...</i></a></label>
+  </div>
+  <div class="content field-content">
+    <div class="transition hidden field-content">description.</div>
+  </div>
+</div>  -->
