@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ViewChild, Directive, ElementRef, OnDestroy, OnInit, Input } from '@angular/core';
 //import { NavController } from 'ionic-angular';
 import {SignInPage} from '../../pages/signInPage/signInPage';
-//import { Router }            from '@angular/router';
+import { Router }            from '@angular/router';
 declare var $: any
 
 
@@ -39,7 +39,7 @@ export class PageHeader implements OnInit {
   @ViewChild('menuPopup3') menuPopup3ElementRef: ElementRef;  
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   ngOnInit() {
@@ -94,10 +94,10 @@ export class PageHeader implements OnInit {
       });
   }
 
-// goToSignIn(){
-//     this.nav.push(SignInPage)
-//     //this.router.navigate(['signIn']);
+//  goToSignIn(){
+     
+//      this.router.navigate(['signIn']);
 
-// }
+//  }
 
 }

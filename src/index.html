@@ -1,10 +1,14 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>LoolkyNg</title>
+  <!-- <script>document.write('<base href="' + document.location + '" />');</script>  -->
   <base href="/">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+
+  <title>LoolkyNg</title>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
 
@@ -20,7 +24,22 @@
   <script src="./assets/semantic/examples/assets/library/jquery.min.js"></script>
   <script src="./assets/semantic/dist/semantic.min.js"></script>
   <script src="./assets/semantic/dist/components/dropdown.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+    <!-- Polyfills -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('main.js').catch(function(err){ console.error(err); });
+    </script>
+
+
 </head>
+
 <body>
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
@@ -37,7 +56,7 @@
 
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
-  <app-root></app-root>
+  <app-root>Loading...</app-root>
 </body>
-</html>
 
+</html>
