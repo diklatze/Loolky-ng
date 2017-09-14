@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'signInPage',
-  templateUrl: 'signInPage.html',
+  selector: 'joinPage',
+  templateUrl: 'joinPage.html',
   styles: [
     ``,
   ]
 })
-export class SignInPage {
+export class JoinPage {
 
 
 

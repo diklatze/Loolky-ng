@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 import { HomePage } from '../pages/home/home';
 import { SignInPage } from '../pages/signInPage/signInPage';
+import { JoinPage } from '../pages/joinPage/joinPage';
 import { PageHeader } from '../components/pageHeader/pageHeader';
 import { PageFooter } from '../components/pageFooter/pageFooter';
 import { Cards } from '../components/cards/cards';
@@ -13,6 +14,7 @@ import { Cards } from '../components/cards/cards';
   declarations: [
     AppComponent,
     SignInPage,
+    JoinPage,
     PageHeader,
     Cards,
     PageFooter,
