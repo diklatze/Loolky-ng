@@ -35,7 +35,7 @@ export class PageHeader implements OnInit {
 
   //  @ViewChild('descriptionAccordion') descriptionAccordionElementRef: ElementRef;
   @ViewChild('menuPopup1') menuPopup1ElementRef: ElementRef;
-  @ViewChild('menuPopup2') menuPopup2ElementRef: ElementRef;
+  // @ViewChild('menuPopup2') menuPopup2ElementRef: ElementRef;
   @ViewChild('menuPopup3') menuPopup3ElementRef: ElementRef;  
 
 
@@ -64,19 +64,19 @@ export class PageHeader implements OnInit {
       });
 
 
-    $(this.menuPopup2ElementRef.nativeElement)
-      .popup({
-        inline: true,
-        hoverable: true,
-        position: 'bottom left',
-        delay: {
-          show: 300,
-          hide: 300
-        },
-         lastResort :'bottom left',
-         setFluidWidth: false,
-        overflow:true,
-      });
+    // $(this.menuPopup2ElementRef.nativeElement)
+    //   .popup({
+    //     inline: true,
+    //     hoverable: true,
+    //     position: 'bottom left',
+    //     delay: {
+    //       show: 300,
+    //       hide: 300
+    //     },
+    //      lastResort :'bottom left',
+    //      setFluidWidth: false,
+    //     overflow:true,
+    //   });
 
 
       $(this.menuPopup3ElementRef.nativeElement)
