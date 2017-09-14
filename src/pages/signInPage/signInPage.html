@@ -1,6 +1,6 @@
 
 <page-header></page-header>
-<head>
+
   <!-- Standard Meta -->
   <!-- <meta charset="utf-8" /> -->
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -30,59 +30,9 @@
   <script src="../dist/components/form.js"></script>
   <script src="../dist/components/transition.js"></script>
 
-  <style type="text/css">
-    body {
-      background-color: #DADADA;
-    }
-    body > .grid {
-      height: 100%;
-    }
-    .image {
-      margin-top: -100px;
-    }
-    .column {
-      max-width: 450px;
-    }
-  </style>
-  <script>
-  $(document)
-    .ready(function() {
-      $('.ui.form')
-        .form({
-          fields: {
-            email: {
-              identifier  : 'email',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your e-mail'
-                },
-                {
-                  type   : 'email',
-                  prompt : 'Please enter a valid e-mail'
-                }
-              ]
-            },
-            password: {
-              identifier  : 'password',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your password'
-                },
-                {
-                  type   : 'length[6]',
-                  prompt : 'Your password must be at least 6 characters'
-                }
-              ]
-            }
-          }
-        })
-      ;
-    })
-  ;
-  </script>
-</head>
+  
+  
+
 <body>
 
 <div class="ui middle aligned center aligned grid">
@@ -93,7 +43,7 @@
         Log-in to your account
       </div>
     </h2>
-    <form class="ui large form">
+    <form class="ui large form"  #document>
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
