@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-//import { NavController } from 'ionic-angular';
 
 
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
@@ -21,7 +20,7 @@ import 'rxjs/add/operator/map';
       margin-top: 7em;
     }`,
 
-   ` .wireframe {
+    ` .wireframe {
       margin-top: 2em;
     }`,
 
@@ -49,22 +48,23 @@ import 'rxjs/add/operator/map';
   ]
 })
 export class HomePage {
+  diklaString: string;
 
 
   constructor(public http: Http) { }
 
-  
 
-  // getDikla() {
-  //   this.http.get('http://localhost:8080/userget')
-  //     .map((res: Response) => { return res/*.json() */ })
-  //     .subscribe(data => { debugger; this.diklaString = data['_body'] },
-  //     err => { console.log("Oops!"); });
-  // }
+
+  getDikla() {
+     this.http.get('http://34.251.173.40:8000/api/')
+       .map((res: Response) => { return res /*.json() */ })
+       .subscribe(data => { this.diklaString = data['_body']; }
+       , err => { console.log('Oops!'); });
+   }
 
 
   // goToSignUp(){
   //   this.nav.push(SignUpPage)
 
-//}
+  //}
 }

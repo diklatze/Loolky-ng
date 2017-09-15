@@ -9,6 +9,8 @@ import { JoinPage } from '../pages/joinPage/joinPage';
 import { PageHeader } from '../components/pageHeader/pageHeader';
 import { PageFooter } from '../components/pageFooter/pageFooter';
 import { Cards } from '../components/cards/cards';
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { Cards } from '../components/cards/cards';
   imports: [
     BrowserModule,
     HttpModule,
+    // InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
   ],
   providers: [],
@@ -33,8 +36,6 @@ import { Cards } from '../components/cards/cards';
     Cards,
     SignInPage,
     PageFooter,
-    
-
     HomePage
   ],
 })

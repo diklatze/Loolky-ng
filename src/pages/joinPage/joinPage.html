@@ -17,14 +17,39 @@
       <input placeholder="Last Name" type="text">
     </div>
   </div>
-  <div class="field">
-    <label>Email</label>
-    <input placeholder="Email" type="text">
+  <div class="two fields">
+    <div class="field">
+      <label>User name</label>
+      <input placeholder="Email" type="text">
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input placeholder="Email" type="text">
+    </div>
   </div>
-  <div class="field">
-    <label>Password</label>
-    <input type="password">
+  <div class="two fields">
+    <div class="field">
+      <label>Password</label>
+      <input type="password">
+    </div>
+    <div class="ui form">
+      <div class="field">
+        <label>Gender</label>
+        <div class="ui selection dropdown">
+          <input type="hidden" name="gender">
+          <i class="dropdown icon"></i>
+          <div class="default text">Gender</div>
+          <div class="menu">
+            <div class="item" data-value="2">Male</div>
+            <div class="item" data-value="1">Female</div>
+            <div class="item" data-value="0">Other</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
   <div class="inline field">
     <div class="ui checkbox">
       <input type="checkbox" id="terms">
@@ -34,7 +59,5 @@
   <div class="ui blue submit button">Submit</div>
 </form>
 <div class="ui bottom attached warning message">
-  <i class="icon help"></i>
-  Already signed up? <a href="#" routerLink="/signIn" routerLinkActive="active">Login here</a> instead.
+  <i class="icon help"></i> Already signed up? <a href="#" routerLink="/signIn" routerLinkActive="active">Login here</a>  instead.
 </div>
-
