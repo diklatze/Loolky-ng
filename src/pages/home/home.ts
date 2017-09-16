@@ -6,7 +6,8 @@ import 'rxjs/add/operator/map';
 import {HttpClient} from '@angular/common/http';
 
 class ItemsResponse {
-Great: string;
+lastname: string;
+firstname: string;
 }
 
 @Component({
