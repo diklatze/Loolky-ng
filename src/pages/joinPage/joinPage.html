@@ -19,36 +19,71 @@
   </div>
   <div class="two fields">
     <div class="field">
-      <label>User name</label>
-      <input placeholder="Email" type="text">
+      <label>User Name</label>
+      <input placeholder="User Name" type="text">
     </div>
     <div class="field">
       <label>Email</label>
       <input placeholder="Email" type="text">
     </div>
   </div>
+  <div class="three fields">
+
+    <div class="field">
+      <label>Gender</label>
+      <div class="ui selection dropdown" #genderDropdown>
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Gender</div>
+        <div class="menu">
+          <div class="item" data-value="2">Male</div>
+          <div class="item" data-value="1">Female</div>
+          <div class="item" data-value="0">Other</div>
+
+        </div>
+      </div>
+    </div>
+
+        <div class="field">
+      <label>Birth Year</label>
+      <div class="ui selection dropdown" #birthYearDropdown>
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Birth Year</div>
+        <div class="menu">
+          <div class="item" data-value="2">Male</div>
+          <div class="item" data-value="1">Female</div>
+          <div class="item" data-value="0">Other</div>
+
+        </div>
+      </div>
+    </div>
+
+        <div class="field">
+      <label>Country</label>
+      <div class="ui selection dropdown" #countryDropdown>
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Country</div>
+        <div class="menu">
+          <!-- <option *ngFor="let currency of ccyArr" [value]="currency.value">{{currency.desc}}</option> -->
+          <div class="item"  *ngFor="let currency of ccyArr" data-value="currency.value">{{currency.desc}}</div>
+          <!-- <div class="item" data-value="1">Female</div>
+          <div class="item" data-value="0">Other</div> -->
+
+        </div>
+      </div>
+    </div>
+  
+  </div>
   <div class="two fields">
     <div class="field">
       <label>Password</label>
       <input type="password">
     </div>
-    <div class="ui form">
-      <div class="field">
-        <label>Gender</label>
-        <div class="ui selection dropdown">
-          <input type="hidden" name="gender">
-          <i class="dropdown icon"></i>
-          <div class="default text">Gender</div>
-          <div class="menu">
-            <div class="item" data-value="2">Male</div>
-            <div class="item" data-value="1">Female</div>
-            <div class="item" data-value="0">Other</div>
-
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
+
+  
 
   <div class="inline field">
     <div class="ui checkbox">
