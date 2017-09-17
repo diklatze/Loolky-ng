@@ -13,36 +13,49 @@ declare var $: any
   ]
 })
 export class JoinPage {
-ccyArr: { value: string, desc: string }[];
- @ViewChild('genderDropdown') genderDropdownElementRef: ElementRef;
- @ViewChild('birthYearDropdown') birthYearDropdownElementRef: ElementRef;
- @ViewChild('countryDropdown') countryDropdownElementRef: ElementRef;
+  cntArr: { value: string, desc: string }[];
+  cntFlagArr: { value: string, desc: string, flag: string }[];
+
+  @ViewChild('genderDropdown') genderDropdownElementRef: ElementRef;
+  @ViewChild('birthYearDropdown') birthYearDropdownElementRef: ElementRef;
+  @ViewChild('countryDropdown') countryDropdownElementRef: ElementRef;
 
 
   constructor(utilsServices: UtilsServices) {
-    utilsServices.getListOfCurrencies().subscribe(
-            res => { this.ccyArr = res },
-            err => {
-                console.error('Register Gov Contract: Error occured on getListOfCurrencies');
-                console.error(err);
-            });
+    utilsServices.getListOfCountries().subscribe(
+      res => { this.cntFlagArr = res; },
+      err => {
+        console.error('Register Gov Contract: Error occured on getListOfCurrencies');
+        console.error(err);
+      });
+
+
+    this.cntFlagArr.forEach(country => {
+      country.flag = country.value + ' flag';
+    });
+
   }
 
-   ngOnInit() {
+
+
+
+
+
+  ngOnInit() {
 
     $(this.genderDropdownElementRef.nativeElement)
-  .dropdown()
-;
+      .dropdown()
+      ;
 
-   $(this.birthYearDropdownElementRef.nativeElement)
-  .dropdown()
-;
+    $(this.birthYearDropdownElementRef.nativeElement)
+      .dropdown()
+      ;
 
 
-  $(this.countryDropdownElementRef.nativeElement)
-  .dropdown()
-;
-   }
+    $(this.countryDropdownElementRef.nativeElement)
+      .dropdown()
+      ;
+  }
 
 
 }

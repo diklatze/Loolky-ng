@@ -67,14 +67,14 @@
         <div class="default text">Country</div>
         <div class="menu">
           <!-- <option *ngFor="let currency of ccyArr" [value]="currency.value">{{currency.desc}}</option> -->
-          <div class="item"  *ngFor="let currency of ccyArr" data-value="currency.value">{{currency.desc}}</div>
+          <div class="item"  *ngFor="let country of cntFlagArr" data-value="country.value" ><i class="country.flag"></i>{{country.flag}}{{country.desc}}</div>
           <!-- <div class="item" data-value="1">Female</div>
           <div class="item" data-value="0">Other</div> -->
 
         </div>
       </div>
     </div>
-  
+
   </div>
   <div class="two fields">
     <div class="field">
@@ -83,7 +83,7 @@
     </div>
   </div>
 
-  
+
 
   <div class="inline field">
     <div class="ui checkbox">
