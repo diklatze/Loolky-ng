@@ -51,16 +51,23 @@ export class JoinPage {
   ngOnInit() {
 
     $(this.genderDropdownElementRef.nativeElement)
-      .dropdown()
+      .dropdown({ setFluidWidth: false,
+        overflow: true })
       ;
 
     $(this.birthYearDropdownElementRef.nativeElement)
-      .dropdown()
+      .dropdown({ setFluidWidth: false,
+        overflow: true,
+        direction: false,
+      keepOnScreen: false})
       ;
 
 
     $(this.countryDropdownElementRef.nativeElement)
-      .dropdown()
+      .dropdown({ setFluidWidth: false,
+        overflow: true,
+        direction: false,
+      keepOnScreen: false})
       ;
   }
 
