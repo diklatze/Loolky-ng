@@ -137,7 +137,7 @@ export class UtilsServices {
     getListOfCountries(): Observable<any> {
         const cntFlagArr: { value: string, desc: string , flag: string}[] = [
 
-            { value: "af", desc: "Afghanistan" , flag:''},
+            { value: "af", desc: "Afghanistan" , flag:'af flag'},
             { value: "ax", desc: "Aland Islands" ,flag:''},
             { value: "al", desc: "Albania" ,flag:''},
             { value: "dz", desc: "Algeria" ,flag:''},

@@ -30,9 +30,9 @@ export class JoinPage {
       });
 
 
-    this.cntFlagArr.forEach(country => {
-      country.flag = country.value + ' flag';
-    });
+    // this.cntFlagArr.forEach(country => {
+    //   country.flag = country.value + ' flag';
+    // });
 
   }
 

@@ -44,7 +44,7 @@
       </div>
     </div>
 
-        <div class="field">
+    <div class="field">
       <label>Birth Year</label>
       <div class="ui selection dropdown" #birthYearDropdown>
         <input type="hidden" name="gender">
@@ -59,17 +59,15 @@
       </div>
     </div>
 
-        <div class="field">
+    <div class="field">
       <label>Country</label>
       <div class="ui selection dropdown" #countryDropdown>
-        <input type="hidden" name="gender">
+        <input type="hidden" name="country">
         <i class="dropdown icon"></i>
         <div class="default text">Country</div>
         <div class="menu">
-          <!-- <option *ngFor="let currency of ccyArr" [value]="currency.value">{{currency.desc}}</option> -->
-          <div class="item"  *ngFor="let country of cntFlagArr" data-value="country.value" ><i class="country.flag"></i>{{country.flag}}{{country.desc}}</div>
-          <!-- <div class="item" data-value="1">Female</div>
-          <div class="item" data-value="0">Other</div> -->
+           <div class="item" *ngFor="let country of cntFlagArr" data-value="country.value">{{country.desc}}</div> 
+          <!-- <countries-dropdown></countries-dropdown> -->
 
         </div>
       </div>

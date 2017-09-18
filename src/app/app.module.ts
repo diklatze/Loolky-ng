@@ -10,6 +10,7 @@ import { SignInPage } from '../pages/signInPage/signInPage';
 import { JoinPage } from '../pages/joinPage/joinPage';
 import { PageHeader } from '../components/pageHeader/pageHeader';
 import { PageFooter } from '../components/pageFooter/pageFooter';
+import { Countries } from '../components/countriesDropdown/countries';
 import { Cards } from '../components/cards/cards';
 // import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService }  from './in-memory-data.service';
@@ -20,6 +21,7 @@ import { Cards } from '../components/cards/cards';
     SignInPage,
     JoinPage,
     PageHeader,
+    Countries,
     Cards,
     PageFooter,
     HomePage
