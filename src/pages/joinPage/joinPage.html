@@ -47,13 +47,12 @@
     <div class="field">
       <label>Birth Year</label>
       <div class="ui selection dropdown" #birthYearDropdown>
-        <input type="hidden" name="gender">
+        <input type="hidden" name="birthYear">
         <i class="dropdown icon"></i>
         <div class="default text">Birth Year</div>
         <div class="menu">
-          <div class="item" data-value="2">Male</div>
-          <div class="item" data-value="1">Female</div>
-          <div class="item" data-value="0">Other</div>
+          <div class="item" *ngFor="let year of birthYearArr" data-value="year.value">{{year.value}}</div> 
+
 
         </div>
       </div>
