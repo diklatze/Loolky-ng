@@ -506,7 +506,54 @@ export class UtilsServices {
         });
     }
 
+    getListOfWomenCatagory(): Observable<any> {
+        const womenCatArr: { value: string, desc: string}[] = [
 
+            { value: "Dresses", desc: "Dresses"},
+            { value: "Tops", desc: "Tops"},
+            { value: "Trousers", desc: "Trousers"},
+            { value: "Leggins", desc: "Leggins"},
+            { value: "Shorts", desc: "Shorts"},
+            { value: "Shoes", desc: "Shoes"},
+            { value: "Swimwear", desc: "Swimwear"},
+            { value: "Lingerie", desc: "Lingerie"},
+            { value: "Sleepwear", desc: "Sleepwear"},                              
+            { value: "Coats", desc: "Coats"},
+            { value: "Jackets", desc: "Jackets"},
+            { value: "Accessories", desc: "Accessories"},
+            { value: "Maternity", desc: "Maternity"},
+            { value: "Coats", desc: "Coats"}
+           
+        ];
+
+        return new Observable(observer => {
+            observer.next(womenCatArr);
+            observer.complete();
+        });
+    }
+
+    getListOfMenCatagory(): Observable<any> {
+        const womenCatArr: { value: string, desc: string}[] = [
+
+           
+            { value: "Shirts", desc: "Shirts"},
+            { value: "Trousers", desc: "Trousers"},
+            { value: "Shorts", desc: "Shorts"},
+            { value: "Shoes", desc: "Shoes"},
+            { value: "Swimwear", desc: "Swimwear"},
+            { value: "Sleepwear", desc: "Sleepwear"},                              
+            { value: "Coats", desc: "Coats"},
+            { value: "Jackets", desc: "Jackets"},
+            { value: "Underwear", desc: "Underwear"},
+            { value: "Coats", desc: "Coats"}
+           
+        ];
+
+        return new Observable(observer => {
+            observer.next(womenCatArr);
+            observer.complete();
+        });
+    }
 
 
 

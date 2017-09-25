@@ -14,11 +14,12 @@ declare var $: any
 })
 export class AddReviewPage {
   cntArr: { value: string, desc: string }[];
+  womenCatArr: { value: string, desc: string }[];
   cntFlagArr: { value: string, desc: string, flag: string }[];
   birthYearArr: { value: string }[];
 
-  @ViewChild('genderDropdown1') genderDropdownElementRef1: ElementRef;
-  @ViewChild('birthYearDropdown1') birthYearDropdownElementRef1: ElementRef;
+  @ViewChild('catagoryDropdown') catagoryDropdownElementRef: ElementRef;
+  @ViewChild('subCatagoryDropdown') subCatagoryDropdownElementRef: ElementRef;
   @ViewChild('countryDropdown1') countryDropdownElementRef1: ElementRef;
 
 
@@ -37,6 +38,13 @@ export class AddReviewPage {
         console.error(err);
       });
 
+      utilsServices.getListOfWomenCatagory().subscribe(
+        res => { this.womenCatArr = res; },
+        err => {
+          console.error('Register Gov Contract: Error occured on getListOfWomenCatagory');
+          console.error(err);
+        });
+
     // this.cntFlagArr.forEach(country => {
     //   country.flag = country.value + ' flag';
     // });
@@ -50,16 +58,16 @@ export class AddReviewPage {
 
   ngOnInit() {
 
-    $(this.genderDropdownElementRef1.nativeElement)
+    $(this.catagoryDropdownElementRef.nativeElement)
       .dropdown({ setFluidWidth: false,
         overflow: true })
       ;
 
-    $(this.birthYearDropdownElementRef1.nativeElement)
+    $(this.subCatagoryDropdownElementRef.nativeElement)
       .dropdown({ setFluidWidth: false,
         overflow: true,
         direction: false,
-      keepOnScreen: false})
+        keepOnScreen: false})
       ;
 
 
@@ -67,7 +75,7 @@ export class AddReviewPage {
       .dropdown({ setFluidWidth: false,
         overflow: true,
         direction: false,
-      keepOnScreen: false})
+        keepOnScreen: false})
       ;
   }
 

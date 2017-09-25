@@ -17,7 +17,7 @@
 
     <div class="field">
       <label>Catagory</label>
-      <div class="ui selection dropdown" #genderDropdown1>
+      <div class="ui selection dropdown" #catagoryDropdown>
         <input type="hidden" name="catagory">
         <i class="dropdown icon"></i>
         <div class="default text">Catagory</div>
@@ -29,6 +29,18 @@
         </div>
       </div>
     </div>
+
+    <div class="field">
+        <label>Sub Catagory</label>
+        <div class="ui selection dropdown" #subCatagoryDropdown>
+          <input type="hidden" name="catagory">
+          <i class="dropdown icon"></i>
+          <div class="default text">Sub Catagory</div>
+          <div class="menu">
+              <div class="item" *ngFor="let catagory of womenCatArr" data-value="catagory.value">{{catagory.value}}</div>        
+          </div>
+        </div>
+      </div>
     
     <div class="field">
       <label>Last Name</label>
