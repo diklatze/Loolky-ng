@@ -2,16 +2,34 @@
 
 <div class="ui attached message">
   <div class="header">
-    Welcome to our site!
+    Add new Review
   </div>
-  <p>Fill out the form below to sign-up for a new account</p>
+  <p>Fill out the form below to add new review</p>
 </div>
 <form class="ui form attached fluid segment">
-  <div class="two fields">
+   <div class="two fields">
     <div class="field">
-      <label>First Name</label>
-      <input placeholder="First Name" type="text">
+      <label>Link item</label>
+      <input type="text" placeholder="Please paste full URL">
     </div>
+  </div>
+  <div class="three fields">
+
+    <div class="field">
+      <label>Catagory</label>
+      <div class="ui selection dropdown" #genderDropdown1>
+        <input type="hidden" name="catagory">
+        <i class="dropdown icon"></i>
+        <div class="default text">Catagory</div>
+        <div class="menu">
+          <div class="item" data-value="3">Women</div>
+          <div class="item" data-value="2">Man</div>
+          <div class="item" data-value="1">Kids</div>
+          <div class="item" data-value="0">Homeware</div>       
+        </div>
+      </div>
+    </div>
+    
     <div class="field">
       <label>Last Name</label>
       <input placeholder="Last Name" type="text">
@@ -29,9 +47,9 @@
   </div>
   <div class="three fields">
 
-    <div class="field">
+    <!-- <div class="field">
       <label>Gender</label>
-      <div class="ui selection dropdown" #genderDropdown>
+      <div class="ui selection dropdown" #genderDropdown1>
         <input type="hidden" name="gender">
         <i class="dropdown icon"></i>
         <div class="default text">Gender</div>
@@ -42,11 +60,11 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="field">
       <label>Birth Year</label>
-      <div class="ui selection dropdown" #birthYearDropdown>
+      <div class="ui selection dropdown" #birthYearDropdown1>
         <input type="hidden" name="birthYear">
         <i class="dropdown icon"></i>
         <div class="default text">Birth Year</div>
@@ -60,7 +78,7 @@
 
     <div class="field">
       <label>Country</label>
-      <div class="ui selection dropdown" #countryDropdown>
+      <div class="ui selection dropdown" #countryDropdown1>
         <input type="hidden" name="country">
         <i class="dropdown icon"></i>
         <div class="default text">Country</div>
@@ -76,7 +94,7 @@
   <div class="two fields">
     <div class="field">
       <label>Password</label>
-      <input type="password" placeholder="Password">
+      <input type="password">
     </div>
   </div>
 
