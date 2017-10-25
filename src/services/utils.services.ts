@@ -533,7 +533,7 @@ export class UtilsServices {
     }
 
     getListOfMenCatagory(): Observable<any> {
-        const womenCatArr: { value: string, desc: string}[] = [
+        const menCatArr: { value: string, desc: string}[] = [
 
            
             { value: "Shirts", desc: "Shirts"},
@@ -550,7 +550,7 @@ export class UtilsServices {
         ];
 
         return new Observable(observer => {
-            observer.next(womenCatArr);
+            observer.next(menCatArr);
             observer.complete();
         });
     }
