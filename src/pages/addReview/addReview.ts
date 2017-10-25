@@ -18,6 +18,9 @@ export class AddReviewPage {
   cntFlagArr: { value: string, desc: string, flag: string }[];
   birthYearArr: { value: string }[];
 
+  chosenCatagory: any;
+  chosenSubCatagory : any;
+
   @ViewChild('catagoryDropdown') catagoryDropdownElementRef: ElementRef;
   @ViewChild('subCatagoryDropdown') subCatagoryDropdownElementRef: ElementRef;
   @ViewChild('countryDropdown1') countryDropdownElementRef1: ElementRef;
@@ -59,8 +62,12 @@ export class AddReviewPage {
   ngOnInit() {
 
     $(this.catagoryDropdownElementRef.nativeElement)
-      .dropdown({ setFluidWidth: false,
-        overflow: true })
+      .dropdown({ 
+        setFluidWidth: false,
+        direction: false,
+        overflow: true 
+      
+      })
       ;
 
     $(this.subCatagoryDropdownElementRef.nativeElement)

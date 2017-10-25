@@ -7,7 +7,7 @@
   <p>Fill out the form below to add new review</p>
 </div>
 <form class="ui form attached fluid segment">
-   <div class="two fields">
+  <div class="two fields">
     <div class="field">
       <label>Link item</label>
       <input type="text" placeholder="Please paste full URL">
@@ -17,31 +17,49 @@
 
     <div class="field">
       <label>Catagory</label>
-      <div class="ui selection dropdown" #catagoryDropdown>
-        <input type="hidden" name="catagory">
+
+      <select [(ngModel)]="chosenCatagory"  name="chosenCatagory" class="ui dropdown" #catagoryDropdown>
+        <option value="">Catagory</option>
+        <option [ngValue]="">Women</option>
+        <option [ngValue]="">Man</option>
+        <option [ngValue]="">Kids</option>
+        <option [ngValue]="">Homeware</option>
+      </select>
+
+      <!-- <div class="ui selection dropdown" #catagoryDropdown>
+        <input [(ngModel)]="chosenCatagory"  type = "text" name="catagory">
         <i class="dropdown icon"></i>
         <div class="default text">Catagory</div>
         <div class="menu">
-          <div class="item" data-value="3">Women</div>
+          <div  class="item" data-value="3">Women</div>
           <div class="item" data-value="2">Man</div>
           <div class="item" data-value="1">Kids</div>
-          <div class="item" data-value="0">Homeware</div>       
+          <div class="item" data-value="0">Homeware</div>
         </div>
-      </div>
+      </div> -->
+      
     </div>
 
+
     <div class="field">
-        <label>Sub Catagory</label>
-        <div class="ui selection dropdown" #subCatagoryDropdown>
-          <input type="hidden" name="catagory">
-          <i class="dropdown icon"></i>
-          <div class="default text">Sub Catagory</div>
-          <div class="menu">
-              <div class="item" *ngFor="let catagory of womenCatArr" data-value="catagory.value">{{catagory.value}}</div>        
-          </div>
+      <label>Sub Catagory {{chosenCatagory}}</label>
+      <!-- <div class="ui selection dropdown" #subCatagoryDropdown>
+        <input type="hidden" name="catagory">
+        <i class="dropdown icon"></i>
+        <div class="default text">Sub Catagory</div>
+        <div class="menu">
+          <div class="item" *ngFor="let catagory of womenCatArr" data-value="catagory.value">{{catagory.value}}</div>
         </div>
-      </div>
-    
+      </div> -->
+      <select   class="ui dropdown" #subCatagoryDropdown>
+          <option value="">Sub Catagory</option>
+          <div>
+          <option  [ngValue]="" *ngFor="let catagory of womenCatArr">{{catagory.value}}</option>
+          </div>
+        </select>
+
+    </div>
+
     <div class="field">
       <label>Last Name</label>
       <input placeholder="Last Name" type="text">
@@ -81,7 +99,7 @@
         <i class="dropdown icon"></i>
         <div class="default text">Birth Year</div>
         <div class="menu">
-          <div class="item" *ngFor="let year of birthYearArr" data-value="year.value">{{year.value}}</div> 
+          <div class="item" *ngFor="let year of birthYearArr" data-value="year.value">{{year.value}}</div>
 
 
         </div>
@@ -95,7 +113,7 @@
         <i class="dropdown icon"></i>
         <div class="default text">Country</div>
         <div class="menu">
-           <div class="item" *ngFor="let country of cntFlagArr" data-value="country.value">{{country.desc}}</div> 
+          <div class="item" *ngFor="let country of cntFlagArr" data-value="country.value">{{country.desc}}</div>
           <!-- <countries-dropdown></countries-dropdown> -->
 
         </div>
@@ -113,13 +131,10 @@
 
 
   <div class="inline field">
-    <div class="ui checkbox">
-      <input type="checkbox" id="terms">
-      <label for="terms">I agree to the terms and conditions</label>
-    </div>
+
   </div>
   <div class="ui blue submit button">Submit</div>
 </form>
-<div class="ui bottom attached warning message">
-  <i class="icon help"></i> Already signed up? <a href="#" routerLink="/signIn" routerLinkActive="active">Login here</a>  instead.
-</div>
+<!-- <div class="ui bottom attached warning message">
+ 
+</div> -->
