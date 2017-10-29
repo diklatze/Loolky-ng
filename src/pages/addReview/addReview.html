@@ -18,16 +18,16 @@
     <div class="field">
       <label>Catagory</label>
 
-      <select [(ngModel)]="chosenCatagory"  name="chosenCatagory" class="ui dropdown" #catagoryDropdown>
+      <select [(ngModel)]="chosenCatagory"  name="chosenCatagory" class="ui fluid dropdown form-control" #catagoryDropdown>
         <option value="">Catagory</option>
-        <option [ngValue]="">Women</option>
-        <option [ngValue]="">Man</option>
-        <option [ngValue]="">Kids</option>
-        <option [ngValue]="">Homeware</option>
+        <option Value="women">Women</option>
+        <option Value="man">Man</option>
+        <option Value="kids">Kids</option>
+        <option Value="homeware">Homeware</option>
       </select>
-
-      <!-- <div class="ui selection dropdown" #catagoryDropdown>
-        <input [(ngModel)]="chosenCatagory"  type = "text" name="catagory">
+<!-- 
+      <div class="ui selection dropdown" #catagoryDropdown>
+        <input [(ngModel)]="chosenCatagory"  type = "text" name="chosenCatagory">
         <i class="dropdown icon"></i>
         <div class="default text">Catagory</div>
         <div class="menu">
@@ -51,13 +51,14 @@
           <div class="item" *ngFor="let catagory of womenCatArr" data-value="catagory.value">{{catagory.value}}</div>
         </div>
       </div> -->
-      <select   class="ui dropdown" #subCatagoryDropdown>
+      <select  class="ui fluid dropdown form-control" #subCatagoryDropdown [(ngModel)]="chosenSubCatagory" name="chosenSubCatagory"> 
           <option value="">Sub Catagory</option>
-          <div>
-          <option  [ngValue]="" *ngFor="let catagory of womenCatArr">{{catagory.value}}</option>
-          </div>
+          
+          <option *ngFor="let catagory of womenCatArr" [value]="catagory.value" >{{catagory.value}}</option>
+          
         </select>
 
+        
     </div>
 
     <div class="field">

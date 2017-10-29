@@ -17,8 +17,12 @@ export class AddReviewPage {
   womenCatArr: { value: string, desc: string }[];
   cntFlagArr: { value: string, desc: string, flag: string }[];
   birthYearArr: { value: string }[];
-
-  chosenCatagory: any;
+  readOnlyMode:boolean=true;
+  chosenCatagory: any= "lala";
+  
+  
+  // console.log( this.chosenCatagory);
+  
   chosenSubCatagory : any;
 
   @ViewChild('catagoryDropdown') catagoryDropdownElementRef: ElementRef;
