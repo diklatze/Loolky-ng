@@ -1,5 +1,7 @@
 <page-header></page-header>
 
+<dropdownEx></dropdownEx>
+
 <div class="ui attached message">
   <div class="header">
     Add new Review
@@ -18,7 +20,7 @@
     <div class="field">
       <label>Catagory</label>
 
-      <select [(ngModel)]="chosenCatagory"  name="chosenCatagory" class="ui fluid dropdown form-control" #catagoryDropdown>
+      <select  (change)="typeChanged()" [(ngModel)]="chosenCatagory"  name="chosenCatagory" class="ui fluid dropdown form-control" #catagoryDropdown>
         <option value="">Catagory</option>
         <option Value="women">Women</option>
         <option Value="man">Man</option>
