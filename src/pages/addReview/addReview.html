@@ -2,13 +2,15 @@
 
 
   
-    <form [formGroup]="productForm" (ngSubmit)="submitForm()">
-            <div class="form-group">
+    <form [formGroup]="productForm" (ngSubmit)="submitForm()"  class="ui form attached fluid segment">
+        <div class="field">
+            
             <label>Product Type</label>
-            <select formControlName="productType" (change)="typeChanged()" class="form-control">
-              <option>Pick a type...</option>
+            <select [(ngModel)]="chosenCatagory" formControlName="productType" (change)="typeChanged()" class="ui fluid dropdown form-control" #catagoryDropdown>
+              
               <option *ngFor="let t of productTypes">{{t}}</option>
             </select>
+        
         </div>
         <div class="form-group">
             <label>Products - Option #1 (total={{productsAfterChangeEvent.length}})</label>
@@ -49,7 +51,7 @@
     <div class="field">
       <label>Catagory</label>
 
-      <select  (change)="typeChanged()" [(ngModel)]="chosenCatagory"  name="chosenCatagory" class="ui fluid dropdown form-control" #catagoryDropdown>
+      <select  (change)="typeChanged()" [(ngModel)]="chosenCatagory"  name="chosenCatagory" class="ui fluid dropdown form-control" >
         <option value="">Catagory</option>
         <option Value="women">Women</option>
         <option Value="man">Man</option>
