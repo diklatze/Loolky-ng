@@ -18,8 +18,9 @@ export class AddReviewPage {
   womenCatArr: { name: string, type: string }[];
   menCatArr: { name: string, type: string }[];
 
-  productTypes = ['Women', 'Men', 'Kids', 'Homeware'];
-  allProducts: { name: string, type: string }[];
+  catagories = ['Women', 'Men', 'Kids', 'Homeware'];
+  subCatagories: { name: string, type: string }[];
+  
   productsAfterChangeEvent = [];
   productForm: any;
 
@@ -32,7 +33,7 @@ export class AddReviewPage {
   chosenCatagory: string;
 
 
-  // console.log( this.chosenCatagory);
+  
 
   chosenSubCatagory: any;
 
@@ -71,22 +72,22 @@ export class AddReviewPage {
       });
 
     this.productForm = fb.group({
-      productType: [],
-      product: [],
-      product2: []
+      catagory: [],
+      subCatagory: [],
     });
 
-    this.allProducts = this.womenCatArr.concat(this.menCatArr);
+    this.subCatagories = this.womenCatArr.concat(this.menCatArr);
   }
 
   // Rebuild the product list every time the product type changes.
   typeChanged() {
-    const productType = this.productForm.get('productType').value;
-    this.productsAfterChangeEvent = this.allProducts.filter(p => p.type == productType);
+    const catagory = this.productForm.get('catagory').value;
+    this.productsAfterChangeEvent = this.subCatagories.filter(p => p.type == catagory);
   }
 
   submitForm() {
     console.log('Form Data', this.productForm.value);
+    console.log( this.chosenCatagory);
   }
 
   ngOnInit() {

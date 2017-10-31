@@ -18,10 +18,10 @@
 
     <div class="field">
       <label>Catagory</label>
-      <select [(ngModel)]="chosenCatagory" formControlName="productType" (change)="typeChanged()" class="ui fluid dropdown form-control"
+      <select [(ngModel)]="chosenCatagory" formControlName="catagory" (change)="typeChanged()" class="ui fluid dropdown form-control"
         #catagoryDropdown>
               <option value="">Catagory</option>
-            <option *ngFor="let t of productTypes">{{t}}</option>
+            <option *ngFor="let t of catagories">{{t}}</option>
           </select>
 
     </div>
@@ -29,7 +29,7 @@
       <div class="form-group">
         <div class="field">
           <label>Sub catagory</label>
-          <select formControlName="product" class="ui fluid dropdown form-control" #subCatagoryDropdown>
+          <select formControlName="subCatagory" class="ui fluid dropdown form-control" #subCatagoryDropdown>
               <option value=""> Sub catagory</option>
             <option *ngFor="let p of productsAfterChangeEvent">{{p.name}}</option>
           </select>
@@ -95,8 +95,5 @@
   <div class="inline field">
 
   </div>
-  <div class="ui blue submit button">Submit</div>
+  <div (click)="submitForm()" class="ui blue submit button">Submit</div>
 </form>
-<!-- <div class="ui bottom attached warning message">
- 
-</div> -->
