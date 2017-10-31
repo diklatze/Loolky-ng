@@ -15,37 +15,33 @@ declare var $: any
   ]
 })
 export class AddReviewPage {
-  productTypes = ['small', 'large'];
-  allProducts = [
-      { name: 'SmallWidget1', type: 'small' },
-      { name: 'SmallWidget2', type: 'small' },
-      { name: 'SmallWidget3', type: 'small' },
-      { name: 'LargeWidget1', type: 'large' },
-      { name: 'LargeWidget2', type: 'large' }
-  ];
+  womenCatArr: { name: string, type: string }[];
+  menCatArr: { name: string, type: string }[];
+
+  productTypes = ['Women', 'Men', 'Kids', 'Homeware'];
+  allProducts: { name: string, type: string }[];
   productsAfterChangeEvent = [];
   productForm: any;
 
 
 
   cntArr: { value: string, desc: string }[];
-  womenCatArr: { value: string, desc: string }[];
   cntFlagArr: { value: string, desc: string, flag: string }[];
   birthYearArr: { value: string }[];
-  readOnlyMode:boolean=true;
-  chosenCatagory: any= "lala";
-  
-  
+  readOnlyMode: boolean = true;
+  chosenCatagory: string;
+
+
   // console.log( this.chosenCatagory);
-  
-  chosenSubCatagory : any;
+
+  chosenSubCatagory: any;
 
   @ViewChild('catagoryDropdown') catagoryDropdownElementRef: ElementRef;
   @ViewChild('subCatagoryDropdown') subCatagoryDropdownElementRef: ElementRef;
   @ViewChild('countryDropdown1') countryDropdownElementRef1: ElementRef;
 
 
-  constructor(utilsServices: UtilsServices,fb: FormBuilder) {
+  constructor(utilsServices: UtilsServices, fb: FormBuilder) {
     utilsServices.getListOfCountries().subscribe(
       res => { this.cntFlagArr = res; },
       err => {
@@ -53,71 +49,74 @@ export class AddReviewPage {
         console.error(err);
       });
 
-      utilsServices.getListofBirthYear().subscribe(
+    utilsServices.getListofBirthYear().subscribe(
       res => { this.birthYearArr = res; },
       err => {
         console.error('Register Gov Contract: Error occured on getListofBirthYear');
         console.error(err);
       });
 
-      utilsServices.getListOfWomenCatagory().subscribe(
-        res => { this.womenCatArr = res; },
-        err => {
-          console.error('Register Gov Contract: Error occured on getListOfWomenCatagory');
-          console.error(err);
-        });
-    
-        this.productForm = fb.group({
-          productType: [],
-          product: [],
-          product2: []
+    utilsServices.getListOfWomenCatagory().subscribe(
+      res => { this.womenCatArr = res; },
+      err => {
+        console.error('Register Gov Contract: Error occured on getListOfWomenCatagory');
+        console.error(err);
       });
-    // this.cntFlagArr.forEach(country => {
-    //   country.flag = country.value + ' flag';
-    // });
 
+    utilsServices.getListOfMenCatagory().subscribe(
+      res => { this.menCatArr = res; },
+      err => {
+        console.error('Register Gov Contract: Error occured on getListOfMenCatagory');
+        console.error(err);
+      });
+
+    this.productForm = fb.group({
+      productType: [],
+      product: [],
+      product2: []
+    });
+
+    this.allProducts = this.womenCatArr.concat(this.menCatArr);
   }
 
-
-  
-
-  
   // Rebuild the product list every time the product type changes.
   typeChanged() {
-      const productType = this.productForm.get('productType').value;
-      this.productsAfterChangeEvent = this.allProducts.filter(p => p.type == productType);
+    const productType = this.productForm.get('productType').value;
+    this.productsAfterChangeEvent = this.allProducts.filter(p => p.type == productType);
   }
 
   submitForm() {
-      console.log('Form Data', this.productForm.value);
+    console.log('Form Data', this.productForm.value);
   }
-
-
 
   ngOnInit() {
 
     $(this.catagoryDropdownElementRef.nativeElement)
-      .dropdown({ 
+      .dropdown({
         setFluidWidth: false,
         direction: false,
-        overflow: true 
-      
+        overflow: true
+
       })
       ;
 
     $(this.subCatagoryDropdownElementRef.nativeElement)
-      .dropdown({ setFluidWidth: false,
+      .dropdown({
+        setFluidWidth: false,
         overflow: true,
         direction: false,
-        keepOnScreen: false})
+        keepOnScreen: false
+      })
       ;
 
 
     $(this.countryDropdownElementRef1.nativeElement)
-      .dropdown({ setFluidWidth: false,
+      .dropdown({
+        setFluidWidth: false,
         overflow: true,
         direction: false,
-        keepOnScreen: false})
+        keepOnScreen: false
+      })
       ;
   }
 

@@ -507,22 +507,22 @@ export class UtilsServices {
     }
 
     getListOfWomenCatagory(): Observable<any> {
-        const womenCatArr: { value: string, desc: string}[] = [
+        const womenCatArr: { name: string, type: string}[] = [
 
-            { value: "Dresses", desc: "Dresses"},
-            { value: "Tops", desc: "Tops"},
-            { value: "Trousers", desc: "Trousers"},
-            { value: "Leggins", desc: "Leggins"},
-            { value: "Shorts", desc: "Shorts"},
-            { value: "Shoes", desc: "Shoes"},
-            { value: "Swimwear", desc: "Swimwear"},
-            { value: "Lingerie", desc: "Lingerie"},
-            { value: "Sleepwear", desc: "Sleepwear"},                              
-            { value: "Coats", desc: "Coats"},
-            { value: "Jackets", desc: "Jackets"},
-            { value: "Accessories", desc: "Accessories"},
-            { value: "Maternity", desc: "Maternity"},
-            { value: "Coats", desc: "Coats"}
+            { name: "Dresses", type: "Women"},
+            { name: "Tops", type: "Women"},
+            { name: "Trousers", type: "Women"},
+            { name: "Leggins", type: "Women"},
+            { name: "Shorts", type: "Women"},
+            { name: "Shoes", type: "Women"},
+            { name: "Swimwear", type: "Women"},
+            { name: "Lingerie", type: "Women"},
+            { name: "Sleepwear", type: "Women"},                              
+            { name: "Coats", type: "Women"},
+            { name: "Jackets", type: "Women"},
+            { name: "Accessories", type: "Women"},
+            { name: "Maternity", type: "Women"},
+            { name: "Coats", type: "Women"}
            
         ];
 
@@ -533,19 +533,19 @@ export class UtilsServices {
     }
 
     getListOfMenCatagory(): Observable<any> {
-        const menCatArr: { value: string, desc: string}[] = [
+        const menCatArr: { name: string, type: string}[] = [
 
            
-            { value: "Shirts", desc: "Shirts"},
-            { value: "Trousers", desc: "Trousers"},
-            { value: "Shorts", desc: "Shorts"},
-            { value: "Shoes", desc: "Shoes"},
-            { value: "Swimwear", desc: "Swimwear"},
-            { value: "Sleepwear", desc: "Sleepwear"},                              
-            { value: "Coats", desc: "Coats"},
-            { value: "Jackets", desc: "Jackets"},
-            { value: "Underwear", desc: "Underwear"},
-            { value: "Coats", desc: "Coats"}
+            { name: "Shirts", type: "Men"},
+            { name: "Trousers", type: "Men"},
+            { name: "Shorts", type: "Men"},
+            { name: "Shoes", type: "Men"},
+            { name: "Swimwear", type: "Men"},
+            { name: "Sleepwear", type: "Men"},                              
+            { name: "Coats", type: "Men"},
+            { name: "Jackets", type: "Men"},
+            { name: "Underwear", type: "Men"},
+            { name: "Coats", type: "Men"}
            
         ];
 
